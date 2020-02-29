@@ -50,7 +50,7 @@ class MapView extends Component {
   };
 
   render() {
-    const { region, initialRegion, onRegionChange, onPress, options, defaultZoom } = this.props;
+    const { region, initialRegion, onRegionChange, onPress, customMapStyle, defaultZoom } = this.props;
     const { center } = this.state;
     const style = this.props.style || styles.container;
 
@@ -91,7 +91,9 @@ class MapView extends Component {
           onIdle={this.onDragEnd}
           defaultZoom={zoom}
           onClick={onPress}
-          options={options}>
+	  mapStyles={customMapStyle}
+	  defaultOptions={{ styles: customMapStyle }}
+          options={{ styles: customMapStyle }}>
           {this.props.children}
         </GoogleMapContainer>
       </View>
