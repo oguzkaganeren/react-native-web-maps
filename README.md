@@ -1,4 +1,6 @@
 # react-native-web-maps
+**It is only test not for you**
+** You can get it (here)[https://www.npmjs.com/package/react-native-web-maps] **
 > React Native for Web implementation of react-native-maps
 
 ## Getting started
